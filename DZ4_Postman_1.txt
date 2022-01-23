@@ -16,6 +16,11 @@ Protocol: http
 IP: 162.55.220.72
 Port: 5005
 
+Ссылка на коллекцию в Postman в формате JSON:
+https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/Postman_collection_Znatkov_A_A_%20DZ4_Postman_1.json
+или 
+https://www.getpostman.com/collections/9d87b90131dd21afd229
+
 EP_1
 Method: GET
 EndPoint: /get_method
@@ -30,7 +35,7 @@ response:
 ]
 ==================
 Ответ соответствует ожиданиям.
-proof: 
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/a25e81f66648fd05c934d913e3c77f0d1f6380cb/1_get_method.png
 ==================
 
 EP_2
@@ -50,7 +55,9 @@ response:
 
 
 ==================
-
+Ответ от сервера с ошибкой 500
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/2_user_info_3.png
+https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/2_user_info_3_1.png
 ==================
 
 EP_3
@@ -69,7 +76,11 @@ response:
 
 
 ==================
-
+1. В ответе сервера 'name': name после 'daily_sleep': weight * 2.5
+2. В ответе используются двойные кавычки.
+3. 'name': name четвертый элемент (4)  после 'daily_sleep': weight * 2.5 (3).
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/3_object_info_1.png
+==================
 EP_4
 Method: GET
 EndPoint: /object_info_2
@@ -90,6 +101,14 @@ response:
           }
 
 
+==================
+1. 'start_qa_salary' шестой элемент (6) вместо первого (1)
+2. В ответе используются двойные кавычки.
+3. 'qa_salary_after_6_months' пятый элемент (5) вместо второго (2)
+4.  'person': выводятся первым элементом (1) вместо шестого (6). 
+Информация внутри 'person':  не соответствует схеме: 'u_name': 
+[user_name, salary, age] выводится вторым элементом (2)  вместо первого (1), после 'u_age': age
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/4_object_info_2.png
 ==================
 
 EP_5
@@ -114,6 +133,15 @@ response:
 
 
 ==================
+1.  'name': name выводится третьим (3), а не первым (1)
+2. В ответе используются двойные кавычки
+3. 'salary': salary выводится последним (4), вместо третьего (3)
+4.  В 'cat':  и 'dog' - 'name': второй элемент (2) вместо первого (1) , а 'age' первый элемент (1) вместо второго (2)
+5. В EndPoint: /object_info_2 
+'u_salary_1_5_year': salary * 3,3 (вместо *4). Убедиться в правильности.
+
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/5_object_info_3.png
+==================
 
 EP_6
 Method: GET
@@ -129,6 +157,12 @@ response:
           'salary': [salary, str(salary * 2), str(salary * 3)]}
 
 
+==================
+1. 'name':  второй элемент (2) вместо первого (1)  
+2. 'age' перый элемент (1) вместо (2)
+3. В ответе используются двойные кавычки
+4. age уже должен быть int конструкция int(age) нужна?
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/6_object_info_4.png
 ==================
 
 EP_7
@@ -149,3 +183,7 @@ response:
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
           }
+==================
+Ответ приходит с ошибкой 500
+proof: https://github.com/Alekseston/DZ4_Postman_1/blob/2173106c26ec4d6e6c3d4824f54441b8fc2e09e8/7_user_info_2.png
+==================
